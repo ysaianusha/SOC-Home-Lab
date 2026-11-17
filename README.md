@@ -11,7 +11,8 @@ The objective is to develop practical skills through controlled laboratory exerc
 - Understand Windows Security Event Logs.
 - Investigate successful and failed authentication events.
 - Identify suspicious authentication patterns.
-- Understand common credential-based attacks.
+- Monitor local account creation and privileged group membership changes.
+- Correlate Windows security events using timestamps, SIDs, and Logon IDs.
 - Develop foundational SIEM investigation skills.
 - Practice network traffic analysis.
 - Learn vulnerability assessment and incident documentation.
@@ -21,6 +22,8 @@ The objective is to develop practical skills through controlled laboratory exerc
 | Tool | Purpose |
 |---|---|
 | Windows Event Viewer | Security log investigation |
+| PowerShell | Event querying and investigation validation |
+| Auditpol | Windows audit policy inspection and configuration |
 | Wireshark | Network traffic analysis |
 | Nmap | Network discovery and scanning |
 | Microsoft Sentinel | SIEM fundamentals |
@@ -31,22 +34,49 @@ The objective is to develop practical skills through controlled laboratory exerc
 
 ### Day 01 – Windows Security Event Investigation
 
-- Identified Windows Security Event IDs 4624, 4625 and 4634.
-- Investigated successful and failed authentication events.
+Investigated Windows Security Event IDs 4624, 4625 and 4634 to understand successful authentication, failed authentication and logoff activities.
+
+Areas covered:
+
+- Identified successful and failed authentication events.
 - Analyzed Logon Types.
 - Interpreted authentication Status and SubStatus codes.
+- Considered what additional evidence is needed before classifying repeated failed logins as a brute-force attempt.
 - Documented investigation findings.
 
-**Documentation:** [Day 01 – Investigation](Day-01/Investigation-Log.md)
+**Documentation:** [Day 01 – Investigation Log](Day-01/Investigation-Log.md)
 
 **Event Reference:** [Windows Event ID Notes](Day-01/Event-ID-Notes.md)
+
+### Day 02 – Account Creation & Privilege Escalation Monitoring
+
+Performed a controlled Windows lab exercise to monitor local account creation and addition of an account to the local Administrators group.
+
+Areas covered:
+
+- Inspected and enabled successful auditing for User Account Management and Security Group Management.
+- Created a temporary local lab account.
+- Added the test account to the local Administrators group.
+- Investigated Event ID 4720 (user account created) and Event ID 4732 (member added to a security-enabled local group).
+- Practised correlating Subject, Member, group, SID, Logon ID, and timestamp fields.
+- Queried relevant Security events using PowerShell.
+- Removed the temporary account and documented cleanup verification events (4733 and 4726).
+
+**Documentation:** [Day 02 – Investigation Log](Day-02/Investigation-Log.md)
+
+**Event Reference:** [Account Management Event ID Reference](Day-02/Event-ID-Reference.md)
+
+> **Lab note:** The Day 02 exercise is a controlled simulation of account-management activity. The presence of account-creation or group-membership events is not, by itself, proof of malicious activity. Authorization and surrounding context must be investigated. Exact findings should be recorded from the lab's own event evidence.
 
 ## 📈 Skills Being Developed
 
 - Security Monitoring
-- Log Analysis
+- Windows Event Log Analysis
 - Authentication Investigation
-- Network Security
+- Account Management Monitoring
+- Privileged Group Membership Investigation
+- PowerShell Log Querying
+- Event Correlation
 - Threat Detection
 - Incident Analysis
 - Vulnerability Assessment
@@ -54,7 +84,7 @@ The objective is to develop practical skills through controlled laboratory exerc
 
 ## ⚠️ Disclaimer
 
-All practical exercises are performed in personal or authorized laboratory environments. No unauthorized systems are targeted.
+All practical exercises are performed in personal or authorized laboratory environments. No unauthorized systems are targeted. Screenshots and exported logs must be reviewed and sensitive information redacted before publication.
 
 ## 🚀 Ongoing Development
 
