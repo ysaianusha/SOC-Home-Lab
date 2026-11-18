@@ -44,9 +44,9 @@ Areas covered:
 - Considered what additional evidence is needed before classifying repeated failed logins as a brute-force attempt.
 - Documented investigation findings.
 
-**Documentation:** [Investigation Log](Day-01/Investigation-Log.md)
+**Documentation:** [Investigation Log](Windows-Security-Event-Investigation/Investigation-Log.md)
 
-**Event Reference:** [Windows Event ID Notes](Day-01/Event-ID-Notes.md)
+**Event Reference:** [Windows Event ID Notes](Windows-Security-Event-Investigation/Event-ID-Notes.md)
 
 ### Account Creation & Privilege Escalation Monitoring
 
@@ -62,9 +62,9 @@ Areas covered:
 - Queried relevant Security events using PowerShell.
 - Removed the temporary account and documented cleanup verification events (4733 and 4726).
 
-**Documentation:** [Investigation Log](Day-02/Investigation-Log.md)
+**Documentation:** [Investigation Log](Account-Creation-Privilege-Escalation-Monitoring/Investigation-Log.md)
 
-**Event Reference:** [Account Management Event ID Reference](Day-02/Event-ID-Reference.md)
+**Event Reference:** [Account Management Event ID Reference](Account-Creation-Privilege-Escalation-Monitoring/Event-ID-Reference.md)
 
 > **Lab note:** The account-management exercise is a controlled simulation. The presence of account-creation or group-membership events is not, by itself, proof of malicious activity. Authorization and surrounding context must be investigated. Exact findings should be recorded from the lab's own event evidence.
 
