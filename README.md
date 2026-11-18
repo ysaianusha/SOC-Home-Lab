@@ -32,7 +32,7 @@ The objective is to develop practical skills through controlled laboratory exerc
 
 ## 📂 Project Structure
 
-### Day 01 – Windows Security Event Investigation
+### Windows Security Event Investigation
 
 Investigated Windows Security Event IDs 4624, 4625 and 4634 to understand successful authentication, failed authentication and logoff activities.
 
@@ -44,11 +44,11 @@ Areas covered:
 - Considered what additional evidence is needed before classifying repeated failed logins as a brute-force attempt.
 - Documented investigation findings.
 
-**Documentation:** [Day 01 – Investigation Log](Day-01/Investigation-Log.md)
+**Documentation:** [Investigation Log](Day-01/Investigation-Log.md)
 
 **Event Reference:** [Windows Event ID Notes](Day-01/Event-ID-Notes.md)
 
-### Day 02 – Account Creation & Privilege Escalation Monitoring
+### Account Creation & Privilege Escalation Monitoring
 
 Performed a controlled Windows lab exercise to monitor local account creation and addition of an account to the local Administrators group.
 
@@ -62,11 +62,11 @@ Areas covered:
 - Queried relevant Security events using PowerShell.
 - Removed the temporary account and documented cleanup verification events (4733 and 4726).
 
-**Documentation:** [Day 02 – Investigation Log](Day-02/Investigation-Log.md)
+**Documentation:** [Investigation Log](Day-02/Investigation-Log.md)
 
 **Event Reference:** [Account Management Event ID Reference](Day-02/Event-ID-Reference.md)
 
-> **Lab note:** The Day 02 exercise is a controlled simulation of account-management activity. The presence of account-creation or group-membership events is not, by itself, proof of malicious activity. Authorization and surrounding context must be investigated. Exact findings should be recorded from the lab's own event evidence.
+> **Lab note:** The account-management exercise is a controlled simulation. The presence of account-creation or group-membership events is not, by itself, proof of malicious activity. Authorization and surrounding context must be investigated. Exact findings should be recorded from the lab's own event evidence.
 
 ## 📈 Skills Being Developed
 
